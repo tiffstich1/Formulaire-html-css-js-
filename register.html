@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <h2 class="tc">Inscription</h2>
+            <div class="form-row flex gap-10">
+                <input type="text" name="firstname" placeholder="Your firstname" class="flex-1">
+                <input type="text" name="lastname" placeholder="Your lastname" class="flex-1">
+            </div>
+            <div class="error-firstname error"> The firstname length must between 6 en 20 caractères</div>
+            <div class="form-row flex">
+                <input type="text" name="email" placeholder="Your email ..." class="flex-1">
+            </div>
+            <div class="error-email error"> The email is  not correct</div>
+            <div class="form-row flex relative">
+                <input type="password" name="password" placeholder="Your password" class="flex-1">
+                <i class="fas fa-eye fa-eye-slash absolute"></i>
+            </div>
+            <div class="error-password error"> The password length must between 6 en 20 caractères</div>
+            <div class="form-row flex relative">
+                <input type="password" name="passwordConfirm" placeholder="Confirm your password" class="flex-1">
+                <i class="fas fa-eye fa-eye-slash absolute"></i>
+            </div>
+            <div class="error-password error"> Passwords do not match</div>
+
+            <div class="form-row bt-submit flex">
+                <button class="submit flex-1" disabled>S'inscrire</button>
+            </div>
+            <div class="form-row">
+                <p class="info">Vous avez un compte ? si oui, alors <a href="/login.html">cliquez ici</a> pour vous connecter.</p>
+            </div>
+        </form>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
