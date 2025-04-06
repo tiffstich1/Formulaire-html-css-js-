@@ -5,15 +5,18 @@
     background-size: cover;
 }
 form{
-    width: 500px;
-    padding: 10px;
-    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:  translate(-50%,-50%);
-    box-shadow: 2px 8px 16px gray,
-    12px 18px 26px gray;
+    width: 500px;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 10px;
+}
+form h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: green;
 }
 .form-row{
     margin: 10px 0;
@@ -23,48 +26,57 @@ form{
     outline: none;
     border: none;
     border-bottom: 1px solid #ccc;
-    line-height: 1.5;
-    padding-left: 10px;
-    padding-right: 25px;
+    padding: 0 10px;
+}
+.form-row button{
+    color: white;
+    background-color: green;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
 }
 .form-row i{
-    right: 0;
-    top: 15px;
+    right: 10px;
+    top: 10px;
     color: gray;
     cursor: pointer;
 }
-
-.form-row button{
-    outline: none;
-    background-color: rgb(68, 89, 68);
-    border: none;
-    height: 40px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-button:disabled{
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-form h2{
-    text-align: center;
-    color: rgb(154, 175, 154);
-    text-transform: uppercase;
-}
-.error{
-    color: red;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: none;
-}
-.info{
-    text-align: center;
+.form-row .form-info{
     font-size: 0.6rem;
+    text-align: center;
 }
-.info a{
-    color: rgb(61, 176, 61);
+.form-row .form-info a{
     text-decoration: none;
+    color: green;
+}
+form .error{
+    font-size: 0.6rem;
+    color: red;
+}
+
+button:disabled{
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+input:required{
+    border-bottom: 1px solid green;
+}
+
+input:invalid{
+    border-bottom: 1px solid red;
+}
+noscript{
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    width: 100%;
+    height: 50px;
+    color:  white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 50px;
 }
 @media screen and (max-width: 550px) {
     form{
