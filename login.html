@@ -10,21 +10,21 @@
 </head>
 <body>
     <div id="app">
-        <form action="">
+        <form action="" id="login" method="post">
             <h2 class="tc">Connexion</h2>
-            <div class="error-firstname error"> The firstname length must between 6 en 20 caractères</div>
+            
             <div class="form-row flex">
                 <input type="text" name="email" placeholder="Your email ..." class="flex-1">
             </div>
-            <div class="error-email error"> The email is  not correct</div>
+            <div class=" error" id="error-email"></div>
             <div class="form-row flex relative">
                 <input type="password" name="password" placeholder="Your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
             
-            <div class="error-password error"> Passwords do not match</div>
+            <div class=" error" id="error-password"> </div>
             <div class="form-row bt-submit flex">
-                <button class="submit flex-1">Se connecter</button>
+                <button class="submit flex-1" disabled>Se connecter</button>
             </div>
             <div class="form-row">
                 <p class="info">Vous n'avez pas de compte ? si oui, alors <a href="/register.html">cliquez ici</a> pour vous inscrire.</p>

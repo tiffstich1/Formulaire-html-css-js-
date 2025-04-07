@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <form action="">
+        <form id="register" action="/test.html" method="post">
             <h2 class="tc">Inscription</h2>
             <div class="form-row flex gap-10">
                 <input type="text" name="firstname" placeholder="Your firstname" class="flex-1">
@@ -23,7 +23,7 @@
             </div>
             <div class=" error" id="error-email"></div>
             <div class="form-row flex relative">
-                <input type="email" name="password" placeholder="Your password" class="flex-1">
+                <input type="password" name="password" placeholder="Your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
             <div class=" error" id="error-password"> </div>
@@ -31,7 +31,7 @@
                 <input type="password" name="passwordConfirm" placeholder="Confirm your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
-            <div class=" error" id="error-password"></div>
+            <div class=" error" id="error-password-confirm"></div>
 
             <div class="form-row bt-submit flex">
                 <button class="submit flex-1" disabled>S'inscrire</button>
