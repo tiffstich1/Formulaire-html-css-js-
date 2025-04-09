@@ -11,14 +11,14 @@
 <body>
     <div id="app">
         <form action="" id="login" method="post">
-            <h2 class="tc">Connexion</h2>
+            <h2 class="tc">Connexion</h2>          
             
             <div class="form-row flex">
-                <input type="text" name="email" placeholder="Your email ..." class="flex-1">
+                <input type="email" pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$" name="email" placeholder="Your email ..." class="flex-1">
             </div>
             <div class=" error" id="error-email"></div>
             <div class="form-row flex relative">
-                <input type="password" name="password" placeholder="Your password" class="flex-1">
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" name="password" placeholder="Your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
             
@@ -31,6 +31,7 @@
             </div>
         </form>
     </div>
+    <noscript>JavaScript n'est pas activer sur votre ordinateur</noscript>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/function/listener.js"></script>
 </body>

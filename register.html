@@ -13,22 +13,22 @@
         <form id="register" action="/test.html" method="post">
             <h2 class="tc">Inscription</h2>
             <div class="form-row flex gap-10">
-                <input type="text" name="firstname" placeholder="Your firstname" class="flex-1">
-                <input type="text" name="lastname" placeholder="Your lastname" class="flex-1">
+                <input type="text" pattern="^[a-zA-Z]{2,15}$" name="firstname" placeholder="Your firstname" class="flex-1">
+                <input type="text" pattern="^[a-zA-Z]{2,15}$" name="lastname" placeholder="Your lastname" class="flex-1">
             </div>
             <div class=" error" id="error-firstname"></div>
             <div class=" error" id="error-lastname"></div>
             <div class="form-row flex">
-                <input type="text" name="email" placeholder="Your email ..." class="flex-1">
+                <input type="text" pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$" name="email" placeholder="Your email ..." class="flex-1">
             </div>
             <div class=" error" id="error-email"></div>
             <div class="form-row flex relative">
-                <input type="password" name="password" placeholder="Your password" class="flex-1">
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" name="password" placeholder="Your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
             <div class=" error" id="error-password"> </div>
             <div class="form-row flex relative">
-                <input type="password" name="passwordConfirm" placeholder="Confirm your password" class="flex-1">
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$" name="passwordConfirm" placeholder="Confirm your password" class="flex-1">
                 <i class="fas icon-password fa-eye fa-eye-slash absolute"></i>
             </div>
             <div class=" error" id="error-password-confirm"></div>
@@ -41,6 +41,7 @@
             </div>
         </form>
     </div>
+    <noscript>JavaScript n'est pas activer sur votre ordinateur</noscript>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/function/listener.js"></script>
 </body>

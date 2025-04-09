@@ -141,6 +141,11 @@ var listenerFuunction = {
         setSubmitButton()
 
     },
+    submitLoginForm:(ev)=>{
+        ev.preventDefault() //permet de suspendre des action par defaut ( ex: evoie de donnee par une page de traitement)
+        var formData = new FormData(formLogin)
+        //Requete vers le serveur de traitement
+    }
 
 }
 // voir si tout les format sont valide (check = true)
@@ -236,6 +241,9 @@ var setupListener =()=>{
     if (passwordConfirm) {
         passwordConfirm.onkeyup = listenerFuunction.checkPasswordConfirm
         
+    }
+    if(formLogin){
+        formLogin.onsubmit = listenerFuunction.submitLoginForm
     }
 
     for (let index = 0; index < icons.length; index++) {
